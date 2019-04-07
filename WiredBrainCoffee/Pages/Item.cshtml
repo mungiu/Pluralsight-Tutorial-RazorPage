@@ -1,9 +1,18 @@
-﻿@page "{id}"
+﻿@page "/menu/{slug:alpha}"
 @model ItemModel
 @{
     ViewData["Title"] = "About";
 }
-<!-- "{id}" tells razor that any link to this page should include and Id path which will work with our rout ID helper-->
+<!--"{id}" tells razor that any link to this page should include and
+    Id path which will work with our rout ID helper
+    "{slug} a friendly URL path for a content item: EG: "pumpkin-bread"
+    :alpha} forces that the slug place holder only includes alphabet characters
+    :double} must be int parsable
+    :minlength(n)}
+    :datetime} must be formated as date time
+    :guid} must be formated as guid
+    EG: "{slug:alpha:minlength(5)}""
+    NOTE: it is possible to create custom route constraints using "IRouteConstraint"-->
 
 <div class="container">
     <h1 class="mt-4 mb-3">
@@ -33,7 +42,11 @@
             <div class="card">
                 <h5 class="card-header">Nutrition Information</h5>
                 <div class="card-body">
-                    <p>Note: Nutrition information is an estimate only.  We back our goods fresh every day, so nutrition values may vary depending on preparation and serving size.</p>
+                    <p>
+                        Note: Nutrition information is an estimate only.
+                        We back our goods fresh every day, so nutrition values
+                        may vary depending on preparation and serving size.
+                    </p>
                     <ul>
                         <li>Calories: @Model.Item.Calories</li>
                         <li>Total Fat: @Model.Item.Fat%</li>

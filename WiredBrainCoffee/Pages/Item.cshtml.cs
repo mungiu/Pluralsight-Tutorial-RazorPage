@@ -14,12 +14,13 @@ namespace WiredBrainCoffee.Pages
         public MenuItem Item { get; private set; }
 
         // .NET is smart enough to rout URL path segments as parameters
-        public void OnGet(int id)
+        public void OnGet(string slug)
         {
             //Message = "The id is " + id;
 
+            // NOTE: because {slug} has been indicated in "Item.cshtml"
             var menuService = new MenuService();
-            Item = menuService.GetMenuItems().FirstOrDefault(x => x.Id == id);
+            Item = menuService.GetMenuItems().FirstOrDefault(x => x.Slug == slug);
         }
     }
 }

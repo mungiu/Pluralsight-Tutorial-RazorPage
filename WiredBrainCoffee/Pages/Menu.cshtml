@@ -28,10 +28,12 @@
                         <p class="card-text">@item.Summary</p>
                     </div>
                     <div class="card-footer">
-                        <!--NOTE: asp-route-id is used for passing an extra parameter "id" to the "Item" page,
-            which will be used for distinguishing between which item the "Item" page should display
-            This parameter is captured by typing in AT page "{id}" at the very beginning of the Item.cshtml file'-->
-                        <a asp-page="item" asp-route-id="@item.Id" class="btn btn-success w-100">Details & Nutrition</a>
+                        <!--NOTE: asp-route-slug is used for passing an extra parameter"slug" to the "Item" page,
+                        which will be used for distinguishing between which item the "Item" page should display
+                        This parameter is captured by typing in "ATpage {slug}" at the very beginning of the Item.cshtml file'
+                            
+                            if asp-route-id would be used the "Slug" must be replaced with "id"-->
+                        <a asp-page="item" asp-route-slug="@item.Slug" class="btn btn-success w-100">Details & Nutrition</a>
                     </div>
                 </div>
             </div>
