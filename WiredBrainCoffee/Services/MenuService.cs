@@ -14,7 +14,7 @@ namespace WiredBrainCoffee.Services
             {
                 new MenuItem()
                 {
-                    Slug = "pumpkin-bread",
+                    Slug = "pumpkin bread",
                     Name = "Frosted Pumpkin Bread",
                     Summary = "A seasonal delight we offer every autumn.  Pumpking bread with just a bit of spice, cream cheese frosting with just a hint of home.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -28,7 +28,7 @@ namespace WiredBrainCoffee.Services
                 },
                 new MenuItem()
                 {
-                    Slug = "ground-coffee",
+                    Slug = "ground coffee",
                     Name = "Ground to Go",
                     Summary = "Love our coffee? Take it with you so you never have to be without!",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -42,7 +42,7 @@ namespace WiredBrainCoffee.Services
                 },
                 new MenuItem()
                 {
-                    Slug = "granola-nuts",
+                    Slug = "granola nuts",
                     Name = "Granola with Nuts",
                     Summary = "It's not flashy, but it sure is healthy.  Perfect for when you need the calories, but not the guilt.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -56,7 +56,7 @@ namespace WiredBrainCoffee.Services
                 },
                 new MenuItem()
                 {
-                    Slug = "coffee-beans",
+                    Slug = "coffee beans",
                     Name = "Bean there, done that!",
                     Summary = "Do you prefer to grind your own coffee? No problem, we'll give you the beans.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -70,7 +70,7 @@ namespace WiredBrainCoffee.Services
                 },
                 new MenuItem()
                 {
-                    Slug = "fresh-beagle",
+                    Slug = "fresh beagle",
                     Name = "Fresh Bagels",
                     Summary = "They're just as round as donuts, but far more healthy! Freshly made every morning before sunrise.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -84,7 +84,7 @@ namespace WiredBrainCoffee.Services
                 },
                 new MenuItem()
                 {
-                    Slug = "fresh-fruit",
+                    Slug = "fresh fruit",
                     Name = "Fresh Fruit",
                     Summary = "We've got strawberries, blueberries, apples, bananas - we could list them all, but we'd prefer you come take a look!",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
@@ -96,6 +96,48 @@ namespace WiredBrainCoffee.Services
                     Fiber = 6,
                     Sugar = 6
                 }
+            };
+        }
+
+        internal List<MenuItem> GetPopularItems()
+        {
+            return new List<MenuItem>()
+            {
+                // This method should actually pull from the server or from the database directly
+                // where all of the business logic for top popular items is located
+                new MenuItem()
+                {
+                    Name = "Frosted Pumpkin Bread",
+                    Summary = "A seasonal delight we offer every autumn.  " +
+                    "Pumpking bread with just a bit of spice, cream cheese " +
+                    "frosting with just a hint of home.",
+                    Calories = 1,
+                    Fat = 1,
+                    SaturatedFat = 1,
+                    Fiber = 1,
+                    Sugar = 1
+                },
+                new MenuItem()
+                {
+                    Name = "Ground to Go",
+                    Summary = "Love our coffee? Take it with you so you never" +
+                    " have to be without!",
+                    Calories = 2,
+                    Fat = 2,
+                    SaturatedFat = 2,
+                    Fiber = 2,
+                    Sugar = 2
+                },
+                new MenuItem()
+                {
+                    Name = "Granola with Nuts",
+                    Summary = "It's not flashy, but it sure is healthy.  Perfect for when you need the calories, but not the guilt.",
+                    Calories = 3,
+                    Fat = 3,
+                    SaturatedFat = 3,
+                    Fiber = 3,
+                    Sugar = 3
+                },
             };
         }
     }

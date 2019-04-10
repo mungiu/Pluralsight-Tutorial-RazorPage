@@ -68,13 +68,13 @@
                 <h3>Keep in Touch</h3>
                 <p>Sign up for our mailing list - no spam, we promise.</p>
                 <!--asp-page-handler: Allow us to specify a method on our PageModel to handle the submission of this form,
-                    our primary form conventionally maps to "OnPost()" but we can change it to explicitly
-                    point to a specific method EG: "Subscribe"
+                our primary form conventionally maps to "OnPost()" but we can change it to explicitly
+                point to a specific method EG: "Subscribe"
 
-                    "asp-page=" tell which PageModel to point this <form> to, it is optional if you are
-                    posting your <form> to a PageModel with the same name as your template (this)
+                "asp-page=" tell which PageModel to point this <form> to, it is optional if you are
+                posting your <form> to a PageModel with the same name as your template (this)
 
-                    IMPORTANT: asp-page-handler="Subscribe" but the actual metthod name MUST be "OnPostSubscribe()"-->
+                IMPORTANT: asp-page-handler="Subscribe" but the actual metthod name MUST be "OnPostSubscribe()"-->
                 <form asp-page-handler="Subscribe" asp-page="Contact">
                     <div class="control-group form-group">
                         <input name="address" type="text" class="form-control" placeholder="Email" />
@@ -84,6 +84,9 @@
                     </div>
                 </form>
             </div>
+            <hr />
+            <!-- Partial view inserted using tage helpers-->
+            <partial name="MobileWidget" model="@("Get the app")" />
             <hr />
             <div>
                 <h3>Contact Details</h3>

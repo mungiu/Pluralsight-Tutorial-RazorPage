@@ -31,9 +31,9 @@
                         <!--NOTE: asp-route-slug is used for passing an extra parameter"slug" to the "Item" page,
                         which will be used for distinguishing between which item the "Item" page should display
                         This parameter is captured by typing in "ATpage {slug}" at the very beginning of the Item.cshtml file'
-                            
+
                             if asp-route-id would be used the "Slug" must be replaced with "id"-->
-                        <a asp-page="item" asp-route-slug="@item.Slug" class="btn btn-success w-100">Details & Nutrition</a>
+                        <a asp-page="Item" asp-route-slug="@item.Slug" class="btn btn-success w-100">Details & Nutrition</a>
                     </div>
                 </div>
             </div>
@@ -63,3 +63,12 @@
         </li>
     </ul>
 </div>
+
+<!--This section will override a part of the master page content as long as there
+    is a condition in the master page that check for such things
+    NOTE: See "_Layout.cshtml" footer-->
+@section FooterThird {
+    <p><a class="text-white" href="#">This is a test for overriding the footer</a></p>
+    <p><a class="text-white" href="#">This is a test for overriding the footer</a></p>
+    <p><a class="text-white" href="#">This is a test for overriding the footer</a></p>
+}

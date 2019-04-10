@@ -1,4 +1,4 @@
-﻿@page "/menu/{slug:alpha}"
+﻿@page "/menu/{slug}"
 @model ItemModel
 @{
     ViewData["Title"] = "About";
@@ -56,6 +56,9 @@
                     </ul>
                 </div>
             </div>
+            <hr />
+
+            @await Component.InvokeAsync("PopularBrews", new { count = 3 });
         </div>
     </div>
 </div>
